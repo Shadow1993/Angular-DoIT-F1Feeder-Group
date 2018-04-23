@@ -8,6 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DriverModule } from './driver/driver.module';
 import { RaceModule } from './race/race.module';
 import { TeamModule } from './team/team.module';
+import { DriverService } from './driver/driver.service';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,9 +23,10 @@ import { TeamModule } from './team/team.module';
     DriverModule,
     RaceModule,
     TeamModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DriverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
