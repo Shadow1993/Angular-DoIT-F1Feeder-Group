@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-all-drivers',
   templateUrl: './all-drivers.component.html',
   styleUrls: ['./all-drivers.component.css'],
   providers:[DriverService]
