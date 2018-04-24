@@ -32,8 +32,8 @@ div.f1feeder h1 {
 
 #mainView {
     position: fixed;
-    left: 200px;
+    left: 230px;
     right: 0;
-    top: 0;
+    top: 150px;
     bottom: 0;
 }

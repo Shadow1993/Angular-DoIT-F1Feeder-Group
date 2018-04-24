@@ -4,23 +4,28 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-all-drivers',
+  selector: 'app-root',
   templateUrl: './all-drivers.component.html',
   styleUrls: ['./all-drivers.component.css'],
   providers:[DriverService]
 })
 export class AllDriversComponent implements OnInit {
+  driversArr = [];
 
   constructor(private _DriverService: DriverService) {
     
    }
 
   ngOnInit() {
-    this.getDrivers();
+    this._DriverService.getAllDrivers().subscribe(data => {
+      this.driversArr = data;
+      console.log(this.driversArr);
+      
+    });
   }
 
-  getDrivers() {
-    this._DriverService.getAllDrivers(2013);
-  }
+  // getDrivers() {
+  //   this._DriverService.getAllDrivers();
+  // }
 
 }

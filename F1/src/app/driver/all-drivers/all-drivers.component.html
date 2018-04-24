@@ -1,3 +1,12 @@
-<div>
-  <app-all-drivers></app-all-drivers>
-</div>
+
+<table>
+  <tbody>
+    <tr><th colspan='4'>Drivers Championship Race Table</th></tr>
+    <tr *ngFor='let driver of driversArr.MRData.StandingsTable.StandingsLists[0].DriverStandings'>
+      <td>{{driver.position}}</td>
+      <td>{{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
+      <td>{{driver.points}}</td>
+    </tr>
+  </tbody>
+</table>
+

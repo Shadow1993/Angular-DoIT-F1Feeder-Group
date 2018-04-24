@@ -10,6 +10,7 @@ import { RaceModule } from './race/race.module';
 import { TeamModule } from './team/team.module';
 import { DriverService } from './driver/driver.service';
 import { HttpClient } from '@angular/common/http';
+import { Http, HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -24,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     RaceModule,
     TeamModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
+    
   ],
   providers: [DriverService],
   bootstrap: [AppComponent]
