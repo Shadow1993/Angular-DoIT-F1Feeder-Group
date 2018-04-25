@@ -5,14 +5,16 @@ import { RaceRoutingModule } from './race-routing.module';
 import { RaceComponent } from './race/race.component';
 import { AllRacesComponent } from './all-races/all-races.component';
 import { RaceService } from './race.service';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     RaceRoutingModule,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    FormsModule
+],
   declarations: [RaceComponent, AllRacesComponent],
   providers: [RaceService]
 })
