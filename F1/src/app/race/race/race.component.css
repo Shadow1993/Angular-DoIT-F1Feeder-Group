@@ -1,0 +1,17 @@
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 10px;
+    padding: 10px;
+}
+thead th {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+td, th {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

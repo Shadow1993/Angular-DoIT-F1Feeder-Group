@@ -1,3 +1,82 @@
-<p>
-  race works!
-</p>
+<div>
+    <h2>{{track.raceName}}</h2>
+    <p>Country: {{track.country}}</p>
+    <p>Location: {{track.location}}</p>
+    <p>Date: {{track.date}}</p>
+    <p>Full Report: <a [href]="track.url"><img src="assets/images/externalLink.png" alt="externalLink"></a></p>
+</div>
+<table>
+    <thead>
+        <tr>
+            <td colspan="4">
+                Qualifying Results
+            </td>
+        </tr>
+        <tr>
+            <th>Pos</th>
+            <th>Driver</th>
+            <th>Team</th>
+            <th>Best Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let q of qualifier">
+            <td>
+                {{q.position}}
+            </td>
+            <td>
+                {{q.Driver.familyName}}
+            </td>
+            <td>
+                {{q.Constructor.name}}
+            </td>
+            <td>
+                <span *ngIf="!q.Q2">
+                    {{q.Q1}}
+                </span>
+                <span *ngIf="!q.Q3">
+                    {{q.Q2}}
+                </span>
+                <span *ngIf="q.Q3">
+                    {{q.Q3}}
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <thead>
+        <tr>
+            <td colspan="5">
+                Race Results
+            </td>
+        </tr>
+        <tr>
+            <th>Pos</th>
+            <th>Driver</th>
+            <th>Team</th>
+            <th>Result</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of race">
+            <td>
+                {{r.position}}
+            </td>
+            <td>
+                {{r.Driver.familyName}}
+            </td>
+            <td>
+                {{r.Constructor.name}}
+            </td>
+            <td>
+                <span *ngIf="r.Time">{{r.Time.time}}</span>
+                <span *ngIf="!r.Time">N/A</span>
+            </td>
+            <td>
+                {{r.points}}
+            </td>
+        </tr>
+    </tbody>
+</table>
