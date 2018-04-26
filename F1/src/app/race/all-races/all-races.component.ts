@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RaceService } from '../race.service';
+import { RaceService } from '../_service.race/race.service';
 
 @Component({
     selector: 'app-all-races',
