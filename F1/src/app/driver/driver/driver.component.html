@@ -1,3 +1,20 @@
-<p>
-  driver works!
-</p>
+<h1>Formula 1 - 2013 Results</h1>
+<table>
+  <tbody>
+    <tr>
+      <th>Round</th>
+      <th>Grand Prix</th>
+      <th>Team</th>
+      <th>Grid</th>
+      <th>Race</th>
+    </tr>
+    <tr *ngFor='let d of driverRaces' [routerLink]="['/drivers', d.round]">
+      <td>{{d.round}}</td>
+      <td>{{d.raceName}}</td>
+      <td>{{d.Results[0].Constructor.name}}</td>
+      <td>{{d.Results[0].grid}}</td>
+      <td>{{d.Results[0].points}}</td>
+      
+    </tr>
+  </tbody>
+</table>

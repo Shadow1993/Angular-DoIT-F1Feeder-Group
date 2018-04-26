@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   providers:[DriverService]
 })
 export class AllDriversComponent implements OnInit {
-  driversArr = [];
+  driversArr;
 
   constructor(private _DriverService: DriverService) {
     
@@ -20,12 +20,7 @@ export class AllDriversComponent implements OnInit {
     this._DriverService.getAllDrivers().subscribe(data => {
       this.driversArr = data;
       console.log(this.driversArr);
-      
     });
   }
-
-  // getDrivers() {
-  //   this._DriverService.getAllDrivers();
-  // }
 
 }

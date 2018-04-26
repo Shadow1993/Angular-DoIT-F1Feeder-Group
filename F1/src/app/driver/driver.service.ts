@@ -12,6 +12,16 @@ export class DriverService {
     
     getAllDrivers(): Observable<any> {
         return this._http.get('http://ergast.com/api/f1/2013/driverStandings.json')
-        .map((res: Response) => res.json());
+            .map((res: Response) => res.json().MRData.StandingsTable.StandingsLists[0].DriverStandings);
+    }
+
+    getDetails(id): Observable<any>{
+        return this._http.get(`http://ergast.com/api/f1/2013/drivers/${id}/driverStandings.json`)
+            .map((res: Response) => res.json());
+    }
+
+    getRaces(id): Observable<any>{
+        return this._http.get(`http://ergast.com/api/f1/2013/drivers/${id}/results.json`)
+            .map((res: Response) => res.json().MRData.RaceTable);
     }
 }
