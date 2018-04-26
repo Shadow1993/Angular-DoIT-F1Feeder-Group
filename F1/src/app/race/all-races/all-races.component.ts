@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RaceService } from '../race.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-all-races',
@@ -21,18 +21,14 @@ export class AllRacesComponent implements OnInit {
         this.filteredRaces = this._filter ? this.filterRaces(this._filter) : this.allRaces;
     }
 
-    constructor(private _raceService: RaceService, ) { }
+    constructor(private _route: ActivatedRoute) { }
 
     ngOnInit() {
-        this._raceService.getAllRaces()
-            .subscribe(
-                allRaces => {
-                    console.log(allRaces);
-                    this.allRaces = allRaces;
-                    this.filteredRaces = this.allRaces;
-                },
-                error => console.error(error)
-            );
+        this._route.data
+            .subscribe(data => {
+                this.allRaces = data.allRaces;
+                this.filteredRaces = this.allRaces;
+            });
     }
 
     filterRaces(filterBy: string) {
