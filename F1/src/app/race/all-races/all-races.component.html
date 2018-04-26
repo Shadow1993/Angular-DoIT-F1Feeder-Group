@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let race of filteredRaces">
+    <tr *ngFor="let race of filteredRaces" [routerLink]="['/races', race.round]">
       <td>
         {{race.round}}
       </td>

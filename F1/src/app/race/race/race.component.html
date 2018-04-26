@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let q of qualifier">
+        <tr *ngFor="let q of qualifier" [routerLink]="['/drivers', q.Driver.driverId]">
             <td>
                 {{q.position}}
             </td>
@@ -60,7 +60,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let r of race">
+        <tr *ngFor="let r of race" [routerLink]="['/drivers', r.Driver.driverId]">
             <td>
                 {{r.position}}
             </td>
