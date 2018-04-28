@@ -20,14 +20,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let q of qualifier" [routerLink]="['/drivers', q.Driver.driverId]">
+        <tr *ngFor="let q of qualifier">
             <td>
                 {{q.position}}
             </td>
-            <td>
+            <td [routerLink]="['/drivers', q.Driver.driverId]">
                 {{q.Driver.familyName}}
             </td>
-            <td>
+            <td [routerLink]="['/teams', q.Constructor.constructorId]">
                 {{q.Constructor.name}}
             </td>
             <td>
@@ -60,14 +60,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let r of race" [routerLink]="['/drivers', r.Driver.driverId]">
+        <tr *ngFor="let r of race">
             <td>
                 {{r.position}}
             </td>
-            <td>
+            <td [routerLink]="['/drivers', r.Driver.driverId]">
                 {{r.Driver.familyName}}
             </td>
-            <td>
+            <td [routerLink]="['/teams', r.Constructor.constructorId]">
                 {{r.Constructor.name}}
             </td>
             <td>

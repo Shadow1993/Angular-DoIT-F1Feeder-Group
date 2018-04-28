@@ -11,11 +11,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let race of filteredRaces" [routerLink]="['/races', race.round]">
+    <tr *ngFor="let race of filteredRaces">
       <td>
         {{race.round}}
       </td>
-      <td>
+      <td [routerLink]="['/races', race.round]">
         {{race.raceName}}
       </td>
       <td>
@@ -24,7 +24,7 @@
       <td>
         {{race.date}}
       </td>
-      <td>
+      <td [routerLink]="['/drivers', race.Results[0].Driver.driverId]">
         {{race.Results[0].Driver.familyName}}
       </td>
     </tr>
