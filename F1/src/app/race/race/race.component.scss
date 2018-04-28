@@ -4,14 +4,12 @@ h1 {
     text-indent: 10px;
     padding: 10px;
 }
-
 thead th {
     font-weight: bold;
     font-size: 16px;
 }
 
-td,
-th {
+td, th {
     text-align: center;
     padding: 5px;
     border: 1px solid black;
@@ -20,9 +18,16 @@ th {
 
 .link {
     transition-duration: .4s;
+    &:hover {
+        cursor: pointer;
+        background-color: lightsalmon;
+    }
 }
 
-.link:hover {
-    cursor: pointer;
-    background-color: lightsalmon;
+.qualifying-table {
+    width: 40%;
+}
+
+.race-table {
+    width: 50%;
 }

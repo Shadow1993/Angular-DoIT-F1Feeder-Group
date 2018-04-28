@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'app-all-races',
     templateUrl: './all-races.component.html',
-    styleUrls: ['./all-races.component.css']
+    styleUrls: ['./all-races.component.scss']
 })
 export class AllRacesComponent implements OnInit {
 

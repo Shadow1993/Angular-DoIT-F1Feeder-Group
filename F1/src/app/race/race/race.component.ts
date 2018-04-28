@@ -5,7 +5,7 @@ import { RaceService } from '../_service.race/race.service';
 @Component({
     selector: 'app-race',
     templateUrl: './race.component.html',
-    styleUrls: ['./race.component.css']
+    styleUrls: ['./race.component.scss']
 })
 export class RaceComponent implements OnInit {
 
