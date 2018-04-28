@@ -23,19 +23,19 @@ div.f1feeder {
     font-size: 40px;
     padding: 20px;
     text-align: center;
-}
-
-div.f1feeder h1 {
-    margin: 0 10px;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    h1 {
+        margin: 0 10px;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
 }
 
 #mainView {
     position: fixed;
-    left: 230px;
+    left: 200px;
     right: 0;
-    top: 150px;
+    top: 35px;
     bottom: 0;
     overflow: auto;
+    background-color: gray;
 }

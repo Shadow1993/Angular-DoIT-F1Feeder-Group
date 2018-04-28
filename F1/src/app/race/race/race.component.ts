@@ -29,30 +29,6 @@ export class RaceComponent implements OnInit {
                 url: data.qualifier.Circuit.url,
             };
         });
-        // this._route.params.subscribe(params => {
-        //     this.id = +params['id'];
-        //     this._raceService.getQualifier(this.id)
-        //         .subscribe(qualifier => {
-        //             if (qualifier.QualifyingResults) {
-        //                 this.qualifier = qualifier.QualifyingResults;
-        //                 this.track = {
-        //                     raceName: qualifier.raceName,
-        //                     country: qualifier.Circuit.Location.country,
-        //                     location: qualifier.Circuit.Location.locality,
-        //                     date: qualifier.date,
-        //                     url: qualifier.Circuit.url,
-        //                 };
-        //             }
-        //             console.log(qualifier);
-        //         });
-        //     this._raceService.getRace(this.id)
-        //         .subscribe(race => {
-        //             if (race.Results) {
-        //                 this.race = race.Results;
-        //             }
-        //             console.log(race);
-        //         });
-        // });
     }
 
 }

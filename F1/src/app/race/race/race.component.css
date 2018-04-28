@@ -16,8 +16,11 @@ td, th {
     border-collapse: collapse;
 }
 
-tr:hover {
-    cursor: pointer;
+.link {
     transition-duration: .4s;
+}
+
+.link:hover {
+    cursor: pointer;
     background-color: lightsalmon;
 }

@@ -1,5 +1,7 @@
+<div>
+    <input [(ngModel)]="filter" type="text" placeholder="Filter..">
+</div>
 <h1>Race Calendar</h1>
-<input [(ngModel)]="filter" type="text" placeholder="Filter..">
 <table>
   <thead>
     <tr>
@@ -11,11 +13,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let race of filteredRaces" [routerLink]="['/races', race.round]">
+    <tr *ngFor="let race of filteredRaces">
       <td>
         {{race.round}}
       </td>
-      <td>
+      <td [routerLink]="['/races', race.round]" class="link">
         {{race.raceName}}
       </td>
       <td>
@@ -24,7 +26,7 @@
       <td>
         {{race.date}}
       </td>
-      <td>
+      <td [routerLink]="['/drivers', race.Results[0].Driver.driverId]" class="link">
         {{race.Results[0].Driver.familyName}}
       </td>
     </tr>
