@@ -33,9 +33,10 @@ div.f1feeder h1 {
 
 #mainView {
     position: fixed;
-    left: 230px;
+    left: 200px;
     right: 0;
-    top: 150px;
+    top: 35px;
     bottom: 0;
     overflow: auto;
+    background-color: gray;
 }
