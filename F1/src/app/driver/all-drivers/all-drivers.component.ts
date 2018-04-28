@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-all-drivers',
   templateUrl: './all-drivers.component.html',
-  styleUrls: ['./all-drivers.component.css'],
+  styleUrls: ['./all-drivers.component.scss'],
   providers:[DriverService]
 })
 export class AllDriversComponent implements OnInit {

@@ -17,7 +17,7 @@ export class DriverService {
 
     getDetails(id): Observable<any>{
         return this._http.get(`http://ergast.com/api/f1/2013/drivers/${id}/driverStandings.json`)
-            .map((res: Response) => res.json());
+            .map((res: Response) => res.json().MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver);
     }
 
     getRaces(id): Observable<any>{

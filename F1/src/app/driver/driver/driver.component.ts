@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-driver',
   templateUrl: './driver.component.html',
-  styleUrls: ['./driver.component.css']
+  styleUrls: ['./driver.component.scss']
 })
 export class DriverComponent implements OnInit {
 
@@ -20,16 +20,15 @@ export class DriverComponent implements OnInit {
    }
 
   ngOnInit() {
-    // this._DriverService.getDetails(this.id).subscribe(data => {
-    //   this.driverDetail = data;
-    //   console.log(data);
-
-    // });
+    this._DriverService.getDetails(this.id).subscribe(data => {
+      this.driverDetail = data;
+      console.log(data);
+      console.log(this.driverDetail.givenName);
+    });
 
     this._DriverService.getRaces(this.id).subscribe(data => {
       this.driverRaces = data.Races;
-      console.log(data);
-
+      // console.log(data);
     });
   }
 
