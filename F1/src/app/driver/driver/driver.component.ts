@@ -10,7 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 export class DriverComponent implements OnInit {
 
   public id: string;
-  driverDetail;
+  driverDetail = {
+    givenName:  ''
+  };
   driverRaces;
   
   constructor(private _route: ActivatedRoute, private _DriverService: DriverService) {
@@ -23,7 +25,6 @@ export class DriverComponent implements OnInit {
     this._DriverService.getDetails(this.id).subscribe(data => {
       this.driverDetail = data;
       console.log(data);
-      console.log(this.driverDetail.givenName);
     });
 
     this._DriverService.getRaces(this.id).subscribe(data => {

@@ -1,31 +1,47 @@
 <h1>Formula 1 - 2013 Results</h1>
 
 <table>
-  <tbody>
-    <tr>
-      <td>{{driverDetail.givenName}} {{driverDetail.familyName}}</td>
-    </tr>
-  </tbody>
+    <tbody>
+        <tr>
+            <td>{{driverDetail.Driver.givenName}} {{driverDetail.Driver.familyName}}</td>
+        </tr>
+        <tr>
+            <td>Country: {{driverDetail.Driver.nationality}}</td>
+        </tr>
+        <tr>
+            <td>Team: {{driverDetail.Constructors[0].name}}</td>
+        </tr>
+        <tr>
+            <td>Birth: {{driverDetail.Driver.dateOfBirth}}</td>
+        </tr>
+        <tr>
+            <td>Biography:
+                <a [href]="driverDetail.Driver.url">
+                    <span class="glyphicon glyphicon-share"></span>
+                </a>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 
 
 <table>
-  <tbody>
-    <tr>
-      <th>Round</th>
-      <th>Grand Prix</th>
-      <th>Team</th>
-      <th>Grid</th>
-      <th>Race</th>
-    </tr>
-    <tr *ngFor='let d of driverRaces' [routerLink]="['/drivers', d.round]">
-      <td>{{d.round}}</td>
-      <td>{{d.raceName}}</td>
-      <td>{{d.Results[0].Constructor.name}}</td>
-      <td>{{d.Results[0].grid}}</td>
-      <td>{{d.Results[0].points}}</td>
-      
-    </tr>
-  </tbody>
+    <tbody>
+        <tr>
+            <th>Round</th>
+            <th>Grand Prix</th>
+            <th>Team</th>
+            <th>Grid</th>
+            <th>Race</th>
+        </tr>
+        <tr *ngFor='let d of driverRaces' [routerLink]="['/drivers', d.round]">
+            <td>{{d.round}}</td>
+            <td>{{d.raceName}}</td>
+            <td>{{d.Results[0].Constructor.name}}</td>
+            <td>{{d.Results[0].grid}}</td>
+            <td>{{d.Results[0].points}}</td>
+
+        </tr>
+    </tbody>
 </table>
