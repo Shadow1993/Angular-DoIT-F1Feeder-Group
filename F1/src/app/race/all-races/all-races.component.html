@@ -15,7 +15,7 @@
       <td>
         {{race.round}}
       </td>
-      <td [routerLink]="['/races', race.round]">
+      <td [routerLink]="['/races', race.round]" class="link">
         {{race.raceName}}
       </td>
       <td>
@@ -24,7 +24,7 @@
       <td>
         {{race.date}}
       </td>
-      <td [routerLink]="['/drivers', race.Results[0].Driver.driverId]">
+      <td [routerLink]="['/drivers', race.Results[0].Driver.driverId]" class="link">
         {{race.Results[0].Driver.familyName}}
       </td>
     </tr>

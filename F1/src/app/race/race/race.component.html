@@ -24,10 +24,10 @@
             <td>
                 {{q.position}}
             </td>
-            <td [routerLink]="['/drivers', q.Driver.driverId]">
+            <td [routerLink]="['/drivers', q.Driver.driverId]" class="link">
                 {{q.Driver.familyName}}
             </td>
-            <td [routerLink]="['/teams', q.Constructor.constructorId]">
+            <td [routerLink]="['/teams', q.Constructor.constructorId]" class="link">
                 {{q.Constructor.name}}
             </td>
             <td>
@@ -64,10 +64,10 @@
             <td>
                 {{r.position}}
             </td>
-            <td [routerLink]="['/drivers', r.Driver.driverId]">
+            <td [routerLink]="['/drivers', r.Driver.driverId]" class="link">
                 {{r.Driver.familyName}}
             </td>
-            <td [routerLink]="['/teams', r.Constructor.constructorId]">
+            <td [routerLink]="['/teams', r.Constructor.constructorId]" class="link">
                 {{r.Constructor.name}}
             </td>
             <td>

@@ -4,20 +4,25 @@ h1 {
     text-indent: 10px;
     padding: 10px;
 }
+
 thead th {
     font-weight: bold;
     font-size: 16px;
 }
 
-td, th {
+td,
+th {
     text-align: center;
     padding: 5px;
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-tr:hover {
-    cursor: pointer;
+.link {
     transition-duration: .4s;
+}
+
+.link:hover {
+    cursor: pointer;
     background-color: lightsalmon;
 }
