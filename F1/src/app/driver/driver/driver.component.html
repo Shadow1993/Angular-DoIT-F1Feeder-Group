@@ -15,8 +15,8 @@
             <td>Birth: {{driverDetail.Driver.dateOfBirth}}</td>
         </tr>
         <tr>
-            <td>Biography:
-                <a [href]="driverDetail.Driver.url">
+            <td>
+                <a [href]="driverDetail.Driver.url">Biography
                     <span class="glyphicon glyphicon-share"></span>
                 </a>
             </td>
@@ -37,7 +37,7 @@
         </tr>
         <tr *ngFor='let d of driverRaces' [routerLink]="['/drivers', d.round]">
             <td>{{d.round}}</td>
-            <td>{{d.raceName}}</td>
+            <td [routerLink]="['/races']" class="link">{{d.raceName}}</td>
             <td>{{d.Results[0].Constructor.name}}</td>
             <td>{{d.Results[0].grid}}</td>
             <td>{{d.Results[0].points}}</td>
