@@ -1,3 +1,27 @@
-<p>
-  all-teams works!
-</p>
+<div>
+    <input [(ngModel)]="filter" type="text" placeholder="Filter..">
+</div>
+<h1>Constructors Championship</h1>
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">Constructors Championship Standings - 2013</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let team of filteredTeams">
+      <td>
+        {{team.position}}
+      </td>
+      <td [routerLink]="['/teams', team.Constructor.constructorId]" class="link">
+        {{team.Constructor.name}}
+      </td>
+      <td>
+        <a [href]="team.Constructor.url"><img src="assets/images/externalLink.png" alt="externalLink">Details</a>
+      </td>
+      <td>
+        {{team.points}}
+      </td>
+    </tr>
+  </tbody>
+</table>
