@@ -16,7 +16,11 @@ const routes: Routes = [
     },
     {
         path: 'teams/:id',
-        component: TeamComponent
+        component: TeamComponent,
+        resolve: {
+            team: TeamResolverService,
+            teamRaces: TeamRacesResolverService
+        }
     }
 ];
 

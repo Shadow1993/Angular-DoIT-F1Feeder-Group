@@ -22,7 +22,7 @@ export class TeamService {
 
     getTeam(id): Observable<any> {
         return this._http.get<any>(`http://ergast.com/api/f1/2013/constructors/${id}/constructorStandings.json`)
-            .map(data => data.MRData.StandingsTable)
+            .map(data => data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings[0])
             .catch(error => <any>new Error(error));
     }
 }

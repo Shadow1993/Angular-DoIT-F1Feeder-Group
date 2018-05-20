@@ -1,3 +1,39 @@
-<p>
-  team works!
-</p>
+<div>
+    <h2>{{team.Constructor.name}}</h2>
+    <p>Country: {{team.Constructor.nationality}}</p>
+    <p>Position: {{team.position}}</p>
+    <p>Points: {{team.points}}</p>
+    <p>History: <a [href]="team.Constructor.url"><img src="assets/images/externalLink.png" alt="externalLink"></a></p>
+</div>
+<table class="race-table">
+    <thead>
+        <tr>
+            <td colspan="5">
+                Formula 1 2013 Results
+            </td>
+        </tr>
+        <tr>
+            <th>Round</th>
+            <th>Grand Prix</th>
+            <th>{{racer1}}</th>
+            <th>{{racer2}}</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let race of races">
+            <td>
+                {{race.round}}
+            </td>
+            <td [routerLink]="['/races', race.round]" class="link">
+                {{race.Circuit.circuitName}}
+            </td>
+            <td *ngFor="let r of race.Results">
+                {{r.position}}
+            </td>
+            <td>
+                {{getPoints(race.Results[0].points, race.Results[1].points)}}
+            </td>
+        </tr>
+    </tbody>
+</table>
